@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function playgame() {
+        let name;
+        if ((name = prompt("辦公阿宅的一天，阿宅大名是......?"))) {
+          alert("阿宅" + name + "，是吧? 歡迎來到辦公阿宅的一天");
+        } else {
+          name = "Hi~";
+          alert("阿宅等你想到名字再回來吧!");
+        }
+
+        if (confirm("阿宅" + name + "，準備好了嗎?")) {
+          alert("新的一天即將到來");
+
+          if (
+            qq(
+              "[6:00  A.M.](督嚕嚕嚕~督嚕嚕嚕~)鬧鐘響了鬧鐘響了!!要不要現在馬上立刻起床?",
+              "早起的鳥兒有蟲吃呀~~啾啾",
+              "痾...睡過頭惹QQ全勤沒了QQ",
+              true
+            )
+          )
+            return;
+          if (
+            qq(
+              "[7:28 A.M.]路易莎咖啡今天買一送十，要不要買?",
+              "不只促進經濟還賺到生活小確幸，GDP和國民幸福感都被我提升了~~啾啾",
+              "好後悔... 好可惜... 好難過... 好討厭... ",
+
+              true
+            )
+          )
+            return;
+          if (
+            qq(
+              "[10:42 A.M.]現正在與老闆開會中，此時正咩女友打電話過來，看起來非常緊急，要不要接呢?!",
+              "休想騙我，我才沒有女朋友勒哇哈哈哈~~啾啾(強忍淚水)",
+              "接起電話結果是傳直銷，忘記自己的女友初音才不會打電話給自己",
+
+              false
+            )
+          )
+            return;
+          if (
+            qq(
+              "[5:30 P.M.]今天又要加班了，要不要加班呢?",
+              "其實我才沒有選擇權勒，加下去就對了，啾啾...(故作堅強)",
+              "老闆說不爽做不要做啊!然後我就被FIRE惹",
+
+              true
+            )
+          )
+            return;
+          if (
+            qq(
+              "[10:30 P.M.]真是血汗公司，現在才終於下班了，回家前要不要到健身房運動一下？",
+              "要活就要動，阿宅動ㄘ動!啾啾~",
+              "屁股長...長痔瘡了...",
+              true
+            )
+          )
+            return;
+
+          alert(
+            `恭喜${name}，在這個難搞的一天中順利倖存!(灑花)明天也要加油喲~!`
+          );
+        }
+      }
+      function qq(msg, good, bad, be) {
+        if (confirm(msg) == be) alert(good);
+        else {
+          alert(bad + "\n" + "嗚嗚...(傷心的無以復加QQ)");
+          return true;
+        }
+      }
+      playgame();
+    </script>
+  </body>
+</html>
